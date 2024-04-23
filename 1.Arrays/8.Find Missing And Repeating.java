@@ -1,8 +1,7 @@
 class Solve {
     int[] findTwoElement(int arr[], int n) {
         int[] ans=new int[2];
-        int i;
-        for( i=0;i<n;i++){
+        for(int i=0;i<n;i++){
             int abs_val=Math.abs(arr[i]);
             if(arr[abs_val-1]>0)
             arr[abs_val-1]=-arr[abs_val-1];
