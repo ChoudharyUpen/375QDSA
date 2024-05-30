@@ -2,7 +2,7 @@ Basicaly this question can be done in 3 steps
 1. Find Mid
 2. Reverse Second Half after detaching
 3. Insert 2nd list into 1st
-  
+Step 4 is most important understand that
 
 class Solution {
     public void reorderList(ListNode head) {
@@ -37,6 +37,7 @@ class Solution {
         }
 
         //Step4
+      Step 4 is most important understand that
         //insert nodes of second list into first list
         ListNode t1=head;
         ListNode t2=prev;
