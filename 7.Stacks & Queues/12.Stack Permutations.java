@@ -60,6 +60,7 @@ class GFG {
 
 class Solution {
     public static int isStackPermutation(int n, int[] ip, int[] op) {
+        //Step 1 ek Stack bano
           Stack<Integer> stack = new Stack<>();
         int j = 0; // pointer for output array
 
