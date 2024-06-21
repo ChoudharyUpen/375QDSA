@@ -1,7 +1,5 @@
-class Tree
-{
-    ArrayList<Integer> leftView(Node root)
-    {
+class Tree{
+    ArrayList<Integer> leftView(Node root){
        ArrayList<Integer> numbers = new ArrayList<>();
         leftViewUtil(root,numbers,0);
         return numbers;
@@ -14,5 +12,4 @@ class Tree
         }
         leftViewUtil(root.left,list,level+1);
         leftViewUtil(root.right,list,level+1);
-    }
-}
+    }}
