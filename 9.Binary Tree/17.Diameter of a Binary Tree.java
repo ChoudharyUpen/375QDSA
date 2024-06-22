@@ -1,7 +1,6 @@
 class Solution {
     int ans = 0; 
     int diameter(Node root) {
-     ans=0;
        height(root);
         return ans;  // Return the final diameter value
     }
