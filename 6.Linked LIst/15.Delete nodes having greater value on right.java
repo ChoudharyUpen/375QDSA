@@ -1,28 +1,17 @@
-class Solution
-{
-    Node compute(Node head)
-    {
-        // your code here
+class Solution{
+    Node compute(Node head){
         Node curr = head;
-        
         Node newnode = new Node(0);
         Node again = newnode;
         while(curr!=null){
-            
             if(!checkIf(curr)){
                 again.next = curr;
-                again = again.next;
-                
+                again = again.next; 
             }
-            
             curr = curr.next;
-            
         }
-        
-        return newnode.next;
-        
+        return newnode.next;    
     }
-    
     boolean checkIf(Node cur){
         Node prev  = cur;
         while(cur!=null){
@@ -32,7 +21,4 @@ class Solution
             cur = cur.next;
         }
         return false;
-    }
-    }
-
-  
+    }}
