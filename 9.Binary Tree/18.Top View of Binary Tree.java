@@ -17,12 +17,15 @@ class Solution {
                 q.add(new Pair(cur.hd+1,cur.node.right));
             }
         }
+       //Final answer tau hama arraylist ma return karna hai is liye ans arraylist bana ka usma loop
+       //chalaga map sa value dalenge or return karenge
         ArrayList<Integer>ans=new ArrayList<>();
         for(Map.Entry<Integer,Integer>entry:map.entrySet()){
             ans.add(entry.getValue());
         }
         return ans;
     }
+   //ye islye banya taki haum queue ma 2 value ger saka
     static class Pair{
         int hd;
         Node node;
