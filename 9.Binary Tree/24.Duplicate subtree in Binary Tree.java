@@ -1,3 +1,31 @@
+
+              1
+             /   \ 
+           2       3
+         /   \       \    
+        4     5       2     
+                     /  \    
+                    4    5
+ 
+              VS
+              
+              
+                1     ---Dikat is case ma aye ge kyuki isa same subtree bta dega 
+             /   \      par ya same thodi na hai
+           2       3      
+         /   \       \    Tau iska Solution hai Ki hum ya par ek Deleimeter use karenge
+        4     5       2     if we use Delimeter in this case: 
+                       \     245 vs 2$4$5$ --- the answer will be false
+                        5    if we use don't use Delimeter in this case: 
+                        \      245 vs 245 --- the answer will be True
+                        4     So Using Delimeter is Important for passing all test cases
+ 
+ 
+ 
+ 1.Duplicate Subtree of size 2 or more
+ 2. Don't Consider Leaf Node Alone
+
+
 //dry run this code by yourself + teach this question to yourself+(M.Imp) question
 class Solution {
        HashMap<String, Integer> map;
