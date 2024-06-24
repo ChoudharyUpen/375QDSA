@@ -46,5 +46,6 @@ class GfG {
             i++;
             j++;
         }
+        //here 3-2(i)+ 3-2(j)=1+1=2 answer
         return pathA.size()-i+pathB.size()-j;
     }}
