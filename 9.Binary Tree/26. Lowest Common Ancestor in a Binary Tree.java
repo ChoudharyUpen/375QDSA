@@ -13,7 +13,7 @@ class Solution{
    Node lca(Node root, int n1,int n2){
 	    //Base Case or     //4.None of a and b in any subtree
 	    if(root==null)return null;
-	     //1.cur=q || cur=b
+	     //1.cur=a || cur=b --- is case k matalab ye hai ki huma in dono ma sa koi a ya b ma sa koi mil gya hai
 	    if(root.data==n1|| root.data==n2)return root;
 	    
 	    
