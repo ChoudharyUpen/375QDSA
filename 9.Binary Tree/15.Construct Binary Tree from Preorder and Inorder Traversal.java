@@ -15,12 +15,8 @@ class Solution {
             ++i; // inorder index increment karo
             return null; // return null
         }
-
         TreeNode node = new TreeNode(preorder[p++]); // naya node banao preorder[p] se
         node.left = build(preorder, inorder, node.val); // left child ke liye recursive call
         node.right = build(preorder, inorder, stop); // right child ke liye recursive call
         return node; // node return karo
-    }
-}
-
-    
+    }}
