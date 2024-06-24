@@ -1,3 +1,12 @@
+            5    
+          /   \ 
+         2     3
+        /   
+       4
+        \
+         1
+        /  \
+       7    6
 class Solution{
     //Node Left Right -- Normal Traversal 
     //Four Cases can be here in case of Normal Traversal   -----
