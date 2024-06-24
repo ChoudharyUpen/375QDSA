@@ -1,7 +1,5 @@
-class Tree
-{
-    public ArrayList<Integer> reverseLevelOrder(Node node) 
-    {
+class Tree{
+    public ArrayList<Integer> reverseLevelOrder(Node node) {
     ArrayList<Integer> ans= new ArrayList<>();
     Queue <Node> q=new LinkedList<>();
     q.add(node);
@@ -13,5 +11,4 @@ class Tree
     }
     Collections.reverse(ans);
     return ans;
-    }
-}
+    }}
