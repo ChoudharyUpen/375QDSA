@@ -8,6 +8,8 @@ class Solution{
 	    if(root == null) return res;
 	     //adding data of root node to res.
 	    res.add(root.data);
+	 //Agar user na jo Tree Enter kiya hai usmma ek he node tau wo ek bar he return ho isliye use kiya 
+		//for example---- 1 node agar enter kiya hai tau output ma ek baar he 1 return hona chaiye jaise 1 naki 11
 	    if(isLeafNode(root)){
 	        return res;
 	    }
