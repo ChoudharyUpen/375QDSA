@@ -1,3 +1,15 @@
+Summary ---
+        1
+      /   \
+     2     3
+    /  \  /  \
+   4   5  6   7
+For 6 Path --- 1,3,6
+For 7 Path --- 1,3,7
+we are going to find path then we are going to find 
+common path betwen them 
+and return pathA.size()-i+pathB.size()-j; 
+
 class GfG {
     void help(Node root,ArrayList<Integer> curPath,ArrayList<Integer> pathA,ArrayList<Integer> pathB,int a,int b){
         if(root==null)return;
