@@ -19,6 +19,8 @@ class Solution {
 //Agar yeh line nahi hogi, to sirf root ke sath subRoot ko compare 
 //karke hi answer mil jayega, aur uske left aur right subtrees ko check nahi kiya jayega.
 
+        //jab helper function false return karega tab isko call lega gi
+        //warna helper function tau pura return true he kar dega
         return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
     }
 
