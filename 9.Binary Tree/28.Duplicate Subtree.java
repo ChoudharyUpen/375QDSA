@@ -18,9 +18,11 @@ class Solution{
         String right = helper(root.right, l, s);
         
         String curr = left + "-" + root.data + "-" + right;
+       // checking frequency --- if it is already 1 adding it into the list means it already came and now we have find duplicate 
         if(s.getOrDefault(curr, 0) == 1) {  // only once the duplicate subtree root should be added
             l.add(root);
         }
+       // Calculating the Frequency 
         s.put(curr, s.getOrDefault(curr, 0) + 1); // updating frequency
         return curr;
     }
