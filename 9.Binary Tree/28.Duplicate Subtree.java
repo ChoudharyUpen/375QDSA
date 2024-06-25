@@ -22,7 +22,7 @@ class Solution{
         if(s.getOrDefault(curr, 0) == 1) {  // only once the duplicate subtree root should be added
             l.add(root);
         }
-       // Calculating the Frequency 
+       // Calculating the Frequency and putting it into Hashmap
         s.put(curr, s.getOrDefault(curr, 0) + 1); // updating frequency
         return curr;
     }
