@@ -27,28 +27,21 @@ this will apply here
 
 
 
-
-
-
-
-
-
-
-
 class Solution {
-    // Function to insert a node in a BST.
     Node insert(Node root, int Key) {
-         if(root == null)
-        return new Node(Key);
-        
-        if(root.data == Key)
-        return root;
-        
-        if(root.data > Key)
-        root.left = insert(root.left , Key);
-        
-        else root.right = insert(root.right , Key);
-        
-        return root;
+        //when a new node is inserted  in bst it is added as leaf node
+        //so we are returning a new node so that it may get inserted
+       //(I.M Step)
+            
+       if(root==null)return new Node(Key);
+       
+       //This is a Corner Case of this Question
+       if(root.data==Key)return root;
+       
+       if(root.data>=Key)root.left=insert(root.left,Key);
+       else root.right=insert(root.right,Key);
+      
+       return root;  
+       
     }
 }
