@@ -25,7 +25,7 @@ key = 8 for this if it is running for this it will run for all we are doing it w
 class Solution {
     public static void findPreSuc(Node root, Node[] pre, Node[] suc, int key) {
         Node temp=root;
-        //first we are finding Predecessor
+        //For finding Predecessor
         while(temp!=null){
             if(temp.data>=key)temp=temp.left;
             else{
@@ -33,9 +33,9 @@ class Solution {
                 temp=temp.right;
             }
         }
+         // resetting the temp for successor 
         temp=root;
-          //then we are finding  Successor
-
+        //For finding  Successor
         while(temp!=null){
             if(temp.data<=key)temp=temp.right;
             else{
