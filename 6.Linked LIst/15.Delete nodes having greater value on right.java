@@ -1,8 +1,8 @@
 class Solution{
     Node compute(Node head){
-        Node curr = head;
         Node newnode = new Node(0);
         Node again = newnode;
+        Node curr = head;
         while(curr!=null){
             if(!checkIf(curr)){
                 again.next = curr;
