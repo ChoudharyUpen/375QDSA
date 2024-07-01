@@ -7,7 +7,11 @@ Step 4 is most important understand that
 class Solution {
     public void reorderList(ListNode head) {
         //if list is empty
-        if(head==null || head.next==null ||head.next.next==null)  {
+        //Edge Cases:
+
+// Empty List: If head is null, the method should handle this case.
+// Single Node: If the list has only one node, no reordering is needed.
+        if(head==null || head.next==null)  {
             return;
 
         }
