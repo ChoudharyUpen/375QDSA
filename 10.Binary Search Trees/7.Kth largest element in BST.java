@@ -1,8 +1,7 @@
 class Solution
 {       //Declaring a Global ARRAY LIST outside of main function
     ArrayList<Integer>list;
-    public int kthLargest(Node root,int K)
-    {
+    public int kthLargest(Node root,int K){
         //Initalizing the list variable
         list=new ArrayList<>();
         
@@ -12,12 +11,9 @@ class Solution
         //2 4 9
         Collections.sort(list); 
         //3 (list.size()) -2 == 1  which is value 4 so it will return
-        return list.get(list.size()-K);
-           
-        
+        return list.get(list.size()-K);    
     }
-    private void inorder(Node root)
-    { 
+    private void inorder(Node root){ 
         if(root==null){
             return ;
         }
@@ -26,9 +22,4 @@ class Solution
             inorder(root.left);
             list.add(root.data);
             inorder(root.right);
-        }
-        
-    }
-
-    
-}
+        } } }
