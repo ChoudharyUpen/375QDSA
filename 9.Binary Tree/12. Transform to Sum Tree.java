@@ -1,6 +1,6 @@
 class Solution{
     public void toSumTree(Node root){
-         int t=transform(root);
+         transform(root);
     }
     private int transform(Node root){
         if(root==null)return 0;
