@@ -30,7 +30,9 @@ class Solution {
     static int minValue(TreeNode root){
         int minv=root.val;
         while(root.left!=null){
+            //har baar min ki value update kartha jange
             minv=root.left.val;
+            //or agla ke liye call kar dega
             root=root.left;
         }
         return minv;
