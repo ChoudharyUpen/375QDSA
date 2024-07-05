@@ -28,7 +28,7 @@ class GfG{
     }
     Node traverse(ArrayList<Integer> arr,int start,int end){
         if(start>end)return null;
-        int mid = (start + end+1)/2;
+        int mid = (start + end+1)/2; // end+1 isliye kyuki start 0 se hoga
         Node root = new Node(arr.get(mid));
         root.left = traverse(arr,start,mid-1);
         root.right = traverse(arr,mid+1,end);
