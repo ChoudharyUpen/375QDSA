@@ -1,3 +1,4 @@
+//this question done/completed from apna college course videos
 class MyStack {
      Queue<Integer> q1 = new LinkedList<>();
     Queue<Integer> q2 = new LinkedList<>();
