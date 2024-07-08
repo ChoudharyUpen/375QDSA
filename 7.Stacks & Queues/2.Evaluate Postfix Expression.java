@@ -1,12 +1,6 @@
-class Solution
-{
-    //Function to evaluate a postfix expression.
-    public static int evaluatePostFix(String S)
-    {
-        //ek stack bana liye jiska andar value store karwange
+class Solution{
+    public static int evaluatePostFix(String S){
         Stack<Integer> stack = new Stack<>();
-
-       //ab loop chalenge pura string pa bari bari se
         for (int i = 0; i < S.length(); i++) {
             char c = S.charAt(i);
           //check karenge kya vo digit hai agar hai tau stack mai push kar do
@@ -29,10 +23,7 @@ class Solution
                     case '/':
                         stack.push(operand1 / operand2);
                         break;
-                }
-            }
-        }
+                }}}
         //Final answer ko return kar do sare operation ho jane k baad
         return stack.pop();
-    }
-}
+    }}
