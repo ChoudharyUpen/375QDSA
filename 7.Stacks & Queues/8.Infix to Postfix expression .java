@@ -72,3 +72,19 @@ public class InfixToPostfix {
 		infixToPostfix(exp);
 	}
 }
+Agar hum associativity(s.charAt(i)) == 'L' wali line code se hata denge, toh kuch cases mein expression ka postfix conversion galat ho sakta hai, especially right-associative operators ke liye, jaise exponentiation operator (^).
+Finally, stack ka ^ result mein add ho jayega: result = "ab^c^"  wrong answer without using associativity(s.charAt(i)) == 'L'
+
+Iska result galat hoga, kyunki a ^ (b ^ c) ki jagah yeh (a ^ b) ^ c ko represent kar raha hai.
+
+	
+Agar hum associativity(s.charAt(i)) == 'L' wali line use karte hain, toh a ^ (b ^ c) expression ka sahi postfix conversion hoga. 
+abc^^
+
+	
+c = '^' (operator):
+
+Check the top of the stack:
+Precedence of ^ (3) is equal to precedence of ^ (3).
+Associativity of ^ is 'R' (right-associative), so do not pop the stack.
+Push ^ to stack: stack = ['^', '^']
