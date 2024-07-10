@@ -3,7 +3,6 @@ class Solution{
     //PriorityQueue is by default min heap so no need to find minimum
     long minCost(long arr[], int n) {
         PriorityQueue<Long> pq= new PriorityQueue<>();
-       
         for(long i:arr){
             pq.add(i);
         }
@@ -16,6 +15,4 @@ class Solution{
             pq.add(sum);
         }
         return ans;
-        
-    }
-}
+    }}
