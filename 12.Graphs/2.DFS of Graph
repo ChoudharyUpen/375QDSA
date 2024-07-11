@@ -1,0 +1,29 @@
+//this is a simple implementation of dfs in this question
+class Solution {
+    public ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
+        //we have to return the answer in arraylist thats why we are taking arraylist
+        ArrayList<Integer> res = new ArrayList<>();
+        //no need of queue in dfs
+        boolean[] vis = new boolean[V];
+        
+        //calling the function
+        dfs(adj, 0, vis, res);
+        
+         //finaly return the answer in the form of arraylist
+        return res;
+    }
+
+    public void dfs(ArrayList<ArrayList<Integer>> adj, int curr, boolean[] vis, ArrayList<Integer> res) {
+        res.add(curr);
+        vis[curr] = true;
+
+        //finding neighbor of the node we got
+        for (int neighbor : adj.get(curr)) {
+            if (!vis[neighbor]) {
+                //using recursion
+                //recursion call
+                dfs(adj, neighbor, vis, res);
+            }
+        }
+    }
+}
