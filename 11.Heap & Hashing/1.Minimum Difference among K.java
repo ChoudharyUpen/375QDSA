@@ -1,15 +1,25 @@
+Input:
+N=7
+K=3
+arr[] = {10, 100, 300, 200, 1000, 20, 30}
+Output:
+20
+
 //this is the updated solution for this question
 //from chatgpt
 //learned when doing coding tak tak
+    
 class Solution{
     long minDiff(long a[] ,int N,int K){
      Arrays.sort(a);
         long minDiff = Long.MAX_VALUE;
+        //only running a loop k times
         for (int i = 0; i <= N - K; i++) {
             // Find the difference between the maximum and minimum in the current window of size K
             long diff = a[i + K - 1] - a[i];
             minDiff = Math.min(minDiff, diff);
         }
+        //return the minimum differnce among k
         return minDiff;
     }
 }
