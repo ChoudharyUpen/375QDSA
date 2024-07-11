@@ -1,5 +1,11 @@
+//Leetcode
+Example 1:
+Input: nums = [3,2,1,5,6,4], k = 2
+Output: 5
+
+    
 class Solution {
-    //this question will be solved with the help of Priority Queueu
+    //this question will be solved with the help of Priority Queue
     int[] kLargest(int[] arr, int n, int k) {
        PriorityQueue<Integer> pq = new PriorityQueue<>();
         
