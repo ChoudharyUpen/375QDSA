@@ -1,3 +1,7 @@
+//Leetcode
+
+
+
 class Solution {
     //implements Comparable<Pair> ye karna padega tabhi hum isa  priority queue mai use kar payenge
     class Pair implements Comparable<Pair>{
@@ -13,7 +17,7 @@ class Solution {
     }
     public int[] topKFrequent(int[] nums, int k) {
         HashMap<Integer,Integer> mp=new HashMap<>();
-        //for checking frequecy
+        //adding all element of nums array into hashmap
         for(int num:nums){
             //checking if map contain the given element from array and increasing its frequency
             mp.put(num,mp.getOrDefault(num,0)+1);
@@ -32,7 +36,7 @@ class Solution {
                 pq.add(new Pair(key,mp.get(key)));
             }
         }
-        //ab is priotiy queueu mai wahi element hai jo top k element hai
+        //ab is priotiy queue mai wahi element hai jo top k element hai
         //ab is ma se top k element nikalege or 1 -1 kar k store karwta jayenge
         //or uska fir return karege
         int[] arr=new int[k];
