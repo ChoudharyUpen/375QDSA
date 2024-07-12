@@ -35,20 +35,28 @@ class Solution {
            
             // This method defines how the PriorityQueue should order the elements, which in this case are instances of the Pair class
             //This method is used to compare two Pair objects in the max-heap..
-           
-            public int compare(Pair a, Pair b) {
-                // If two elements have the same difference as x, the greater element is prioritized.
-                if (b.key.equals(a.key))
-                    return a.value - b.value;
-                    //If the differences are not the same, the method prioritizes the element with the larger difference (key).
-                return b.key - a.key;
-            }
+
+
+
+           // use of this 4 line code ----- The compare method in the PriorityQueue comparator is crucial for defining the ordering of elements in the heap.
+          public int compare(Pair a, Pair b) {
+    // Agar do elements ka x se same difference hai, toh greater element ko priority do
+    if (b.key.equals(a.key))
+        return a.value - b.value;
+    // Agar differences same nahi hai, toh larger difference (key) wale element ko priority do
+    return b.key - a.key;
+ }
+
         });
       //#1
         for (int i = 0; i < n; i++) {
+           //same element nahi hona chaiye is liye ye if condition lagi hai
             if (arr[i] - x != 0) {
+               //adding the number in pq with its new frequency  frequency based on where it was found
                 maxHeap.add(new Pair(Math.abs(arr[i] - x), arr[i]));
 
+               //phela maxheap mai add ho jaye ga fir check karenge or remove karenge\
+               // remove the element with the highest difference from x.
                 if (maxHeap.size() > k) {
                     maxHeap.poll();
                 }
@@ -59,7 +67,7 @@ class Solution {
         for (int i = k - 1; i >= 0; i--) {
             closest[i] = maxHeap.poll().value;
         }
-
+      //The array closest is [6, 2, 3].
         return closest;
     }
 }
