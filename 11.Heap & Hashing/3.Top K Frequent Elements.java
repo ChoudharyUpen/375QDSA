@@ -1,4 +1,57 @@
 //Leetcode
+//this is better & easy to learn the approach then approach given below
+class Solution {
+    // Function topKFrequent jo array nums aur integer k ko leta hai aur k frequent elements return karta hai
+    public int[] topKFrequent(int[] nums, int k) {
+        // List array create karte hain jiska size nums.length + 1 hai
+        // Yeh buckets frequencies ko store karne ke liye use hoga
+        List<Integer>[] bucket = new List[nums.length + 1];
+        
+        // HashMap banate hain jo key ko number aur value ko us number ka frequency rakhega
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        
+        // For loop use karke hum har number ka frequency count karte hain aur HashMap mein store karte hain
+        for (int num : nums) {
+            hm.put(num, hm.getOrDefault(num, 0) + 1);
+        }
+        
+        // Har key (number) ke liye uska frequency nikalte hain
+        for (int key : hm.keySet()) {
+            int freq = hm.get(key);
+            // Agar bucket mein yeh frequency null hai toh new ArrayList banate hain
+            if (bucket[freq] == null) {
+                bucket[freq] = new ArrayList<>();
+            }
+            // Us number ko uski frequency ke bucket mein add karte hain
+            bucket[freq].add(key);
+        }
+        
+        // Answer array banate hain jisme k elements honge
+        int[] ans = new int[k];
+        int pos = 0;
+        
+        // Reverse order mein bucket iterate karte hain
+        // Taaki highest frequency wale elements pehle mil sakein
+        for (int i = bucket.length - 1; i >= 0; i--) {
+            if (bucket[i] != null) {
+                // Har bucket ke elements ko answer array mein add karte hain
+                for (int j = 0; j < bucket[i].size() && pos < k; j++) {
+                    ans[pos] = bucket[i].get(j);
+                    pos++;
+                }
+            }
+        }
+        
+        // Answer array return karte hain
+        return ans;
+    }
+}
+
+
+
+
+
+
 //improve this code futher beacause it seems hard to understand this solution
 
 
