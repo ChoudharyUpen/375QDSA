@@ -2,6 +2,33 @@
 //question in dsa sheet is ----Number of Triangles in Directed and Undirected Graphs 
 //and i have done this question Number of Triangles by searching for that question 
 
+
+
+Take 3 index i,j,k (0<=i,j,k<n). {i,j}, {j,k}, {k,i} will form a triangle if i!=j and i!=k and j!=k and g[i][j]=1 and g[j][k]=1 and g[k][i]=1.
+Input:
+N=4
+graph[][]={{0, 0, 1, 0}, 
+           {1, 0, 0, 1},
+           {0, 1, 0, 0}, 
+           {0, 0, 1, 0}}
+Output:
+2
+Explanation;
+Triangle 1: {{0,2}, {2,1}, {1,0}}
+graph[][]={{0, 0, 1, 0},
+           {1, 0, 0, 1},
+           {0, 1, 0, 0},
+           {0, 0, 1, 0}}.  
+
+Triangle 2: {{1,3}, {3,2}, {2,1}}
+graph[][]={{0, 0, 1, 0},
+           {1, 0, 0, 1},
+           {0, 1, 0, 0},
+           {0, 0, 1, 0}}. 
+
+
+
+
 class Solution {
     // Yeh function graph mein triangles ke number ko count karega
     public static int numberOfTriangles(int n, int[][] g) {
