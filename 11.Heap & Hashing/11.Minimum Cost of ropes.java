@@ -1,3 +1,15 @@
+Input:
+n = 4
+arr[] = {4, 3, 2, 6}
+Output: 
+29
+
+
+
+
+
+
+
 class Solution{
     //this question is done from anuj bahiya video
     //PriorityQueue is by default min heap so no need to find minimum
