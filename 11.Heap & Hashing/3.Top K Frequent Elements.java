@@ -1,5 +1,18 @@
 //Leetcode
 //this is better & easy to learn the approach then approach given below
+
+
+Example 1:
+
+Input: nums = [1,1,1,2,2,3], k = 2
+Output: [1,2]
+Example 2:
+
+Input: nums = [1], k = 1
+Output: [1]
+
+
+    
 class Solution {
     // Function topKFrequent jo array nums aur integer k ko leta hai aur k frequent elements return karta hai
     public int[] topKFrequent(int[] nums, int k) {
