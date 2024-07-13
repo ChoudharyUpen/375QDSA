@@ -1,5 +1,11 @@
 //learned from leetcode solution & chatgpt
 
+Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
+Output: [[2,2,2],[2,2,0],[2,0,1]]
+
+
+
+    
 class Solution {
     // Method to perform flood fill
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
