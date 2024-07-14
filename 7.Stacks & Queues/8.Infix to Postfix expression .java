@@ -1,7 +1,4 @@
-import java.util.Stack;
-
 public class InfixToPostfix {
-
 	// Function to return precedence of operators
 	static int prec(char c) {
 		if (c == '^')
@@ -28,7 +25,6 @@ public class InfixToPostfix {
 
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
-
 			// If the scanned character is an operand, add it to the output string.
 			if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')) {
 				result.append(c);
@@ -48,28 +44,17 @@ public class InfixToPostfix {
 			// If an operator is scanned
 			else {
 				while (!stack.isEmpty() && (prec(s.charAt(i)) < prec(stack.peek()) ||
-											prec(s.charAt(i)) == prec(stack.peek()) &&
-												associativity(s.charAt(i)) == 'L')) {
+											prec(s.charAt(i)) == prec(stack.peek()) &&								associativity(s.charAt(i)) == 'L')) {
 					result.append(stack.pop());
 				}
 				stack.push(c);
 			}
 		}
-
 		// Pop all the remaining elements from the stack
 		while (!stack.isEmpty()) {
 			result.append(stack.pop());
 		}
-
 		System.out.println(result);
-	}
-
-	// Driver code
-	public static void main(String[] args) {
-		String exp = "a+b*(c^d-e)^(f+g*h)-i";
-
-		// Function call
-		infixToPostfix(exp);
 	}
 }
 Agar hum associativity(s.charAt(i)) == 'L' wali line code se hata denge, toh kuch cases mein expression ka postfix conversion galat ho sakta hai, especially right-associative operators ke liye, jaise exponentiation operator (^).
