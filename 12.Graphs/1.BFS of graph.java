@@ -21,7 +21,8 @@ class Solution {
     public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         //we have to return the answer in arraylist thats why we are taking arraylist
         ArrayList<Integer> res = new ArrayList<>();
-        Queue<Integer> q = new LinkedList<>(); boolean[] vis= new boolean[V];
+        Queue<Integer> q = new LinkedList<>();
+        boolean[] vis= new boolean[V];
         
         q.add(0);
         vis[0] = true;
