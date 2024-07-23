@@ -1,5 +1,12 @@
 //leetcode
 //anuj bhaiya
+
+//four cases can be here
+1.curr=a || curr=b
+2. a=left subtree, b=right subtree
+3.both a and b in any one subtree
+4.none of a and b in any subtree 
+    
 Example 1:
 
 Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
