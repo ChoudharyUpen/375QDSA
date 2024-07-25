@@ -1,5 +1,16 @@
 //gfg
 //gfg solutions
+
+total 5 cases are here ------
+ 1.  // Agar sum zero ho jaye to current combination ko result me add kar do   
+ 2.    // Agar sum negative ho jaye to return kar do
+ 3.         // Loop shuru karke nums array ko traverse karo
+4.     // Duplicate values ko skip karne ke liye
+5.  // Agar current value sum se badi ho to break kar do
+6.    // Agar current value sum se choti ya barabar ho to combination me add karo
+
+
+    
 class Solution {
     static void combination(ArrayList<Integer> nums, int start, int sum, ArrayList<Integer> sub, ArrayList<ArrayList<Integer>> res) {
         // Agar sum zero ho jaye to current combination ko result me add kar do
