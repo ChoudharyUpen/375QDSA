@@ -37,6 +37,7 @@ class Solution {
                 combination(nums, i, sum - val, sub, res);  // Recursive call
                 
                 // Backtracking yahan use hota hai: last added element ko remove karte hain
+             // list mai last added element ko remove karta hai taki or koi naya combination ban saka
                 sub.remove(sub.size() - 1);
             }
         }
