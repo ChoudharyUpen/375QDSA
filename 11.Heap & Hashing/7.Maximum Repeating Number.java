@@ -34,6 +34,7 @@ class Solution {
             }
             
             //for this case
+            //Agar dono ki frequency barabar hai tau usma jo chota hai uski value return karenge 
             //N = 6, K = 3 Arr[] = {2, 2, 1, 0, 0, 1} Output: 0
             if(map.get(ans) == map.get(arr[i])){
                 ans = Math.min(ans, arr[i]);
