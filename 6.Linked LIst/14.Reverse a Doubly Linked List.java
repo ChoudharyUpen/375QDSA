@@ -1,5 +1,6 @@
 //gfgf
 //more better solution downside of this
+//nimisha rawat
 public static Node reverseDLL(Node  head)
 {
   
