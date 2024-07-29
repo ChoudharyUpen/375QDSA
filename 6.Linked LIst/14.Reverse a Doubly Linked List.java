@@ -1,3 +1,5 @@
+//gfgf
+//more better solution downside of this
 public static Node reverseDLL(Node  head)
 {
   
@@ -28,4 +30,25 @@ public static Node reverseDLL(Node  head)
     }
 
     return head; // Return the new head of the reversed list
+}
+
+
+//more better solution
+public static Node reverseDLL(Node  head)
+{
+    Node temp = head, last = null;
+    
+    if(head == null || head.next == null) return head;
+    
+    while(temp != null){
+        last = temp.prev;
+        temp.prev = temp.next;
+        temp.next = last;
+        
+        temp = temp.prev;
+    }
+//     The loop ends because temp is null
+// last points to C
+// last.prev is D, which is the new head of the reversed list
+    return last.prev;
 }
