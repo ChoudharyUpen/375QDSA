@@ -1,33 +1,40 @@
-class Solution{
-    Node divide(int N, Node head){
-        Node o= new Node(-1);
-        Node e= new Node(-1);
+class Solution {
+    Node divide(int N, Node head) {
+        // Dummy nodes create kar rahe hain
+        Node o = new Node(-1);
+        Node e = new Node(-1);
         
-        Node curr1=o;
-        Node curr2=e;
+        // Odd aur even list ke current pointers
+        Node curr1 = o;
+        Node curr2 = e;
         
-        Node pt=head;
+        // Original list traverse karne ke liye pointer
+        Node pt = head;
         
-        while(pt!=null){
-            if(pt.data%2==0){
-                  curr2.next = pt;
+        // Original list ko traverse karte hain
+        while (pt != null) {
+            if (pt.data % 2 == 0) {
+                // Agar even data hai toh even list mein add karo
+                curr2.next = pt;
                 curr2 = pt;
-                
-            }
-            else{
-                  curr1.next = pt;
+            } else {
+                // Agar odd data hai toh odd list mein add karo
+                curr1.next = pt;
                 curr1 = pt;
-                
             }
-             pt = pt.next;
-            
+            // Next node par move karo
+            pt = pt.next;
         }
-         curr1.next = null;
+        
+        // Odd list ko terminate karo
+        curr1.next = null;
+        // Even list ke end ko odd list ke start se link karo
         curr2.next = o.next;
         
+        // Naya head set karo even list ka start
         head = e.next;
-      
-        return head;
         
+        // Modified list ka head return karo
+        return head;
     }
 }
