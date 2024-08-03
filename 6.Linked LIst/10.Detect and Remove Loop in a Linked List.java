@@ -1,37 +1,33 @@
-class Solution
-{
-    public static void removeLoop(Node head){
+class Solution {
+    public static void removeLoop(Node head) {
+        Node prev = null;
         Node slow = head;
         Node fast = head;
-        Node prev = null;
-        
-        while (fast != null && fast.next != null)
-        {
+
+        while (fast != null && fast.next != null) {
             prev = slow;
             slow = slow.next;
             fast = fast.next.next;
 
-            if (slow == fast)
-            {
-                if (slow == head)
-                {
+            if (slow == fast) {
+                // Loop detected
+                if (slow == head) {
+                    // Edge Case: If the loop is at the head
+                    while (prev.next != head) {
+                        prev = prev.next;
+                    }
                     prev.next = null;
                     return;
                 }
                 fast = head;
-                while (fast.next != slow.next)
-                {
-                    slow = slow.next;
+                while (fast != slow) {
                     fast = fast.next;
+                    prev = slow;
+                    slow = slow.next;
                 }
-                slow.next = null;
-                break;
+                prev.next = null;
+                return;
             }
         }
-        
-        return;
     }
-}    return;
-        
-    }  
 }
