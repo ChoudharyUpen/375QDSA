@@ -24,15 +24,19 @@ public class Solution {
     }
 }
 ((iii)question can also be from which place cycle is starting)
-Node detectFirstNode(Node head){
-   Node meet= detectCycle(head);
-   Node start = head;
-   While(start!=meet){
-     start=start.next;
-     meet=meet.next;
-   }
-   return start;
-}
+// Step 2: If loop is detected, find the start of the loop
+    // The line if (slow == fast) { is used 
+    // to check whether the slow and fast pointers have met at some point in the linked list.
+        if (slow == fast) {
+            slow = head;
+            while (slow != fast) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+            return slow; // Starting node of the loop
+        }
+
+        
 ((iv)question can also be linked has cycle usko delete bhi kar ka dikho)
 
 
