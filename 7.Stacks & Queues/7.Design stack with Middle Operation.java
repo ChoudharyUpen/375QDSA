@@ -36,26 +36,3 @@ class MyStack {
 		}
 	}
 }
-class GFG {
-	public static void main(String[] args)
-	{
-		MyStack s = new MyStack();
-		s.add(2);
-		s.add(5);
-
-		System.out.println("Middle element:"+ s.getMiddleElement());
-		s.add(3);
-		s.add(7);
-		s.add(4);
-		System.out.println("Middle element:"+ s.getMiddleElement());
-		s.deleteMiddleElement();
-    
-		System.out.println("Middle element:"+ s.getMiddleElement());
-		s.deleteMiddleElement();
-    
-		System.out.println("Middle element:"+ s.getMiddleElement());
-		s.pop();
-		s.pop();
-		s.deleteMiddleElement();
-	}
-}
