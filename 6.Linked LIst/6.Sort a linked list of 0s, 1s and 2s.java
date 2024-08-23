@@ -40,6 +40,7 @@ class Solution {
             temp=nextNode;
         }
         //Test CASES
+        ab in sab ko jodo
         if(oneHead.next==null){
             zeroTail.next=twoHead.next;
         }
