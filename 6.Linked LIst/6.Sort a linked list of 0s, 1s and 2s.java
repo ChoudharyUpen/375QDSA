@@ -48,6 +48,8 @@ class Solution {
             zeroTail.next=oneHead.next;
             oneTail.next=twoHead.next;
         }
+
+        ab -1 saari node ko null kar do
         oneHead.next=null;
         twoHead.next=null;
         Node t1=zeroHead;
