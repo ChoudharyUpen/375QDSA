@@ -11,6 +11,7 @@ class Solution {
             temp.next = prev;
             temp = temp.prev;
         }
+        //bas ye line important hai ye yaad rakhni hai
         return prev.prev;
     }
 }
