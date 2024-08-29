@@ -1,3 +1,4 @@
+//very easy i find it gfg question
 class Solution
 {
     //Function to find starting point where the truck can start to get through
