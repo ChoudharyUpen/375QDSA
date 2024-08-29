@@ -1,24 +1,18 @@
-// gfg
 //gfg solutions
-
 class Solution{
-        // code here
         static ArrayList<ArrayList<Integer>> res; // Ye res list hai jismein saare solutions store honge
         static int[] row=new int[10]; // Ye array hai jo queen ki row position store karega
         static int k=0; // Ye counter hai jo number of solutions count karega
         
         // Ye function check karta hai ki kya hum queen ko row 'r' aur column 'c' par place kar sakte hain
-        static boolean place(int r, int c)
-        {
-            for(int prev=0; prev<c; prev++)
-            {
+        static boolean place(int r, int c){
+            for(int prev=0; prev<c; prev++){
                 // Agar koi queen pehle se row 'r' mein hai ya phir diagonally attack kar sakti hai to return false
                 if(row[prev] == r || (int)Math.abs(row[prev] - r) == (int)Math.abs(prev - c))
                     return false;
             }
             return true; // Agar place kar sakte hain to return true
         }
-        
         // Ye backtracking function hai jo queen ko place karne ke sab possible ways explore karega
         static void bt(int c, int n)
         {
@@ -43,7 +37,6 @@ class Solution{
                 }
             }
         }
-        
         // Ye function saare solutions return karega
         static ArrayList<ArrayList<Integer>> nQueen(int n)
         {
