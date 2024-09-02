@@ -1,13 +1,20 @@
-//Print sum of first n natural numbers.
+//Binary Strings Problem
+//Print all binary strings of size N without consecutive ones.
 public class q4 {
-    public static int natural(int n) {
-        if (n == 1) {
-            return 1;
+    public static void printBinStrings(int n, int lastPlace, String str) {
+        // base case
+        if (n == 0) {
+            System.out.println(str);
+            return;
         }
-        return n +  natural(n-1);
+        // kaam
+        printBinStrings(n - 1, 0, str + "0");
+        if (lastPlace == 0) {
+            printBinStrings(n - 1, 1, str + "1");
+        }
     }
-    public static void main(String args[]) {
-        int n = 5;
-        System.out.println(natural(n));
+
+    public static void main(String[] args) {
+        printBinStrings(3, 0, " ");
     }
 }
