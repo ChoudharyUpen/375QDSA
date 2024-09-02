@@ -1,17 +1,25 @@
-//Print Factorial of a number n
+//Friends Pairing Problem
 public class q3 {
-    public static int factorial(int n) {
-        if (n == 0) {
-            return 1;
+    public static int friendsPairing(int n) {
+        // base case
+        if (n == 1 || n == 2) {
+            return n;
         }
-        //5 sa 1 tak ka sara number is ma aa jayenge
-        // int fnm1 = factorial(n - 1);
-        //un sara numbers ko bari bari sa multiply kar denge
-        int fn = n * factorial(n - 1);
-        return fn;
+        // choice
+        // single
+        int fnm1 = friendsPairing(n - 1);
+
+        // pair
+        int fnm2 = friendsPairing(n - 2);
+        int pairWays = (n - 1) * fnm2;
+
+        // totalWays
+        int totalWays = fnm1 + pairWays;
+        return totalWays;
     }
-    public static void main(String args[]) {
-        int n = 5;
-        System.out.println(factorial(n));
+
+    public static void main(String[] args) {
+        System.out.println(friendsPairing(3));
+
     }
 }
