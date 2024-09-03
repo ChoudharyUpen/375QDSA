@@ -9,10 +9,13 @@ public class Q2 {
         // kaam
         char currChar = str.charAt(idx);
         // check
+        //agar wo boolean map array mai true hai toh agaa bhad jo 
         if (map[currChar - 'a'] == true) {
             // duplicate
             removveDuplicates(str, idx + 1, newStr, map);
         } else {
+             //agar wo boolean map array mai true nahi  hai usa true mark karo usa string mai jodo 
+            or aga bhad jao
             map[currChar - 'a'] = true;
             removveDuplicates(str, idx+1, newStr.append(currChar), map);
         }
