@@ -1,5 +1,5 @@
 public class InfixToPostfix {
-	// Function to return precedence of operators
+	// Yeh function operators ka precedence (importance) decide karta hai
 	static int prec(char c) {
 		if (c == '^')
 			return 3;
@@ -11,14 +11,14 @@ public class InfixToPostfix {
 			return -1;
 	}
 
-	// Function to return associativity of operators
+	// Yeh function check karta hai ki operator left-associative hai ya right-associative.
 	static char associativity(char c) {
 		if (c == '^')
 			return 'R';
 		return 'L'; // Default to left-associative
 	}
 
-	// The main function to convert infix expression to postfix expression
+	// Yeh main function hai jo infix ko postfix mein convert karta hai.
 	static void infixToPostfix(String s) {
 		StringBuilder result = new StringBuilder();
 		Stack<Character> stack = new Stack<>();
@@ -26,6 +26,7 @@ public class InfixToPostfix {
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
 			// If the scanned character is an operand, add it to the output string.
+			//Agar koi character ya number aya hai toh sedha stack mai add kar do
 			if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')) {
 				result.append(c);
 			}
@@ -41,7 +42,7 @@ public class InfixToPostfix {
 				}
 				stack.pop(); // Pop '('
 			}
-			// If an operator is scanned
+			// If an operator is scanned (Agar Operator ata hai toh ye karna hai 
 			else {
 				while (!stack.isEmpty() && (prec(s.charAt(i)) < prec(stack.peek()) ||
 											prec(s.charAt(i)) == prec(stack.peek()) &&								associativity(s.charAt(i)) == 'L')) {
