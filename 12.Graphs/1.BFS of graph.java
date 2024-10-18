@@ -15,6 +15,8 @@ so starting from 0, it will go to 1 then 2
 then 3. After this 2 to 4, thus bfs will be
 0 1 2 3 4.
 
+    Everything was correct what i was doing but i was not considering this kis mai answer return karna hai         ArrayList<Integer> res = new ArrayList<>();
+
 
 //this is a simple implementation of bfs in this question
 class Solution {
