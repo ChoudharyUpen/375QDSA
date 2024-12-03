@@ -1,6 +1,7 @@
 class Solve {
     int[] findTwoElement(int arr[], int n) {
         int[] ans=new int[2];
+        // //to find duplicate number 
         for(int i=0;i<n;i++){
             int abs_val=Math.abs(arr[i]);
             if(arr[abs_val-1]>0)
@@ -8,6 +9,8 @@ class Solve {
             else
             ans[0]=abs_val;
         }
+
+        //to find missing number 
         for(i=0;i<n;i++){
             if(arr[i]>0)ans[1]=i+1;
         }
