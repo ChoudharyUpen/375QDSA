@@ -8,7 +8,9 @@ class Solution {
         sum=sum+nums[i];
       
         max=Math.max(sum,max);
-      
+
+
+        sum agar -minus mai hai to vo value ko ghata raha hai islye hum sum ko 0 kar denge 
         if(sum<0) sum=0;
     }
     return max;
