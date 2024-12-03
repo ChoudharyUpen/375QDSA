@@ -1,6 +1,8 @@
 class Solution {
     public int trap(int[] height) {
+        //n= length of the street or road
         int n=height.length;
+        //pointing 2 pointer at left and right
         int left[]=new int[n];
         int right[]=new int[n];
         left[0]=height[0];
