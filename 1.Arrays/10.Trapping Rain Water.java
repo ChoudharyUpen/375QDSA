@@ -13,7 +13,8 @@ class Solution {
         for(int i=1;i<n;i++){
             left[i]=Math.max(left[i-1],height[i]);
         }
-        right[n-1]=height[n-1];
+        
+        right[n-1]=height[n-1]; //means the last position in the right will be same as the position of the element .
         for(int i=n-2;i>=0;i--){
             right[i]=Math.max(right[i+1],height[i]);
         }
