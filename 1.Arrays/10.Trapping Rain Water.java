@@ -8,6 +8,8 @@ class Solution {
         int left[]=new int[n];
         int right[]=new int[n];
         left[0]=height[0];
+
+        //current element or just pichla elemnet mai sa jo bhi bada hoga wo left[i] array mai aa jayega 
         for(int i=1;i<n;i++){
             left[i]=Math.max(left[i-1],height[i]);
         }
