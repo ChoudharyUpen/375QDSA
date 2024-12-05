@@ -1,3 +1,5 @@
+//if you are not understanding this learn from chatgpt with the help of dry run it is very easy question
+
 class Solution {
     public int maxArea(int[] height) {
         //ye 2 pointer le liye 
