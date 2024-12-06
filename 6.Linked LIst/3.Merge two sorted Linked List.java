@@ -11,6 +11,8 @@ class Solution {
                 return list2;
         }
         }
+        //base case of recursion 
+        // one list is empty and other listt is completley full which means it is sorted
         if(list1==null)
             return list2;
         return list1;
