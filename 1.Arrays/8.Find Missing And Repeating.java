@@ -1,4 +1,6 @@
 //is code ka kaam hai array me duplicate element aur missing number find karna
+//this is a good question practice it 
+//i have undertanded this with the help of chatgpt on 7-12-2024 now revise it so much that you dont have to learn this again from chatgpt
 class Solve {
     int[] findTwoElement(int arr[], int n) {
         int[] ans=new int[2];
