@@ -1,3 +1,4 @@
+//is code ka kaam hai array me duplicate element aur missing number find karna
 class Solve {
     int[] findTwoElement(int arr[], int n) {
         int[] ans=new int[2];
