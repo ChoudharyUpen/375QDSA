@@ -7,13 +7,18 @@ class Solve {
         // //to find duplicate number 
         for(int i=0;i<n;i++){
             int abs_val=Math.abs(arr[i]);
+
+            ab hum check kartha hai ki vo number visited hai nahi with the help of minus 
             if(arr[abs_val-1]>0)
             arr[abs_val-1]=-arr[abs_val-1];
+
+            agar uspa minus laga hu hai toh iska maatlab hai vo visited hai or huma answer mil gya hai  vo abs_val he answer hoga 
             else
             ans[0]=abs_val;
         }
 
         //to find missing number 
+        huma missing number mila ga ki  +ve number doondtha jo or jis index pa positive number mila us ka index number +1 he answer hoga  
         for(i=0;i<n;i++){
             if(arr[i]>0)ans[1]=i+1;
         }
