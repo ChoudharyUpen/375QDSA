@@ -13,8 +13,8 @@ class Solution
        for(int i=1;i<Intervals.length;i++){
            if(Intervals[res][1]>=Intervals[i][0]){
                // Merge:
-               // start = min(1,2) = 1
-               // end = max(3,6) = 6
+               // start = min(1,3) = 1
+               // end = max(2,6) = 6
                Intervals[res][0]=Math.min(Intervals[res][0],Intervals[i][0]);
                Intervals[res][1]=Math.max(Intervals[res][1],Intervals[i][1]);
            }
