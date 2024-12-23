@@ -1,3 +1,25 @@
+//Date: 23-12-2024 this is the code newly updated before when i did it it was downside 
+class Solution {
+    public List<int[]> mergeOverlap(int[][] arr) {
+        Arrays.sort(arr, (a, b) -> Integer.compare(a[0], b[0]));
+        List<int[]> result = new ArrayList<>();
+        int[] currentInterval = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if (currentInterval[1] >= arr[i][0]) {
+                currentInterval[1] = Math.max(currentInterval[1], arr[i][1]);
+            } else {
+                result.add(currentInterval);
+                currentInterval = arr[i];
+            }
+        }
+        result.add(currentInterval);
+        return result;
+    }
+}
+
+
+
 //Good Question Pratice this 
 //i learned this fromm chatgpt on 8-12-2024 now revise this and other question so much that you dont have to revise anything this again
 
