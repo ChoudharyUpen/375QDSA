@@ -6,10 +6,11 @@ class Solution {
         DLLNode prev = null;
         DLLNode temp = head;
         while(temp != null){
-            prev = temp.prev;
-            temp.prev = temp.next;
-            temp.next = prev;
-            temp = temp.prev;
+        prev = temp.prev;            // Current node ka prev store kar lo
+        temp.prev = temp.next;       // Prev ko next banado
+        temp.next = prev;            // Next ko prev banado
+        temp = temp.prev;            // Ab temp ko aage badhao (jo pehle ka prev tha)
+
         }
         //bas ye line important hai ye yaad rakhni hai
         return prev.prev;
