@@ -9,6 +9,7 @@
 class Solution {
     static final long MOD = 1000000007;
 
+    // for example agar 2 or 1 ko multiply karna hai toh hum 2*10 +1 kar denge ho jayega 21
     public long multiplyTwoLists(Node first, Node second) {
         long num1 = 0;
         long num2 = 0;
