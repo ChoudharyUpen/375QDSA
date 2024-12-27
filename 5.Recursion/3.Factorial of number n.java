@@ -1,25 +1,21 @@
-//Friends Pairing Problem
-public class q3 {
-    public static int friendsPairing(int n) {
-        // base case
-        if (n == 1 || n == 2) {
-            return n;
-        }
-        // choice
-        // single
-        int fnm1 = friendsPairing(n - 1);
+import java.util.Scanner;
 
-        // pair
-        int fnm2 = friendsPairing(n - 2);
-        int pairWays = (n - 1) * fnm2;
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        // totalWays
-        int totalWays = fnm1 + pairWays;
-        return totalWays;
+        System.out.print("Enter a number: ");
+        int n = scanner.nextInt();
+
+        long result = factorial(n);
+        System.out.println("The factorial of " + n + " is: " + result);
     }
 
-    public static void main(String[] args) {
-        System.out.println(friendsPairing(3));
-
+    // Recursive method to calculate factorial
+    public static long factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1; // Base case: factorial of 0 or 1 is 1
+        }
+        return n * factorial(n - 1); // Recursive case
     }
 }
