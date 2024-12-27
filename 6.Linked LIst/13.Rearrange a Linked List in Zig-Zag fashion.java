@@ -1,4 +1,3 @@
-
 class Solution{
 	public static Node zigZag(Node head){
         Node temp = head;
