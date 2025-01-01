@@ -6,6 +6,7 @@ class Solution {
         int ans = Integer.MAX_VALUE;  // Use int since we're working with differences
         
         for (int i = 0; i < n - m + 1; i++) {
+            //sab sa pichla element nikla ga isa wo j hoga 
             int j = i + m - 1;  
             
             if (arr.get(j) - arr.get(i) < ans)
