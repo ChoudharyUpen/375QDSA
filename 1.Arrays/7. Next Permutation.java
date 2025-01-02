@@ -1,4 +1,5 @@
 //this is more better code than code downside 
+//this question is done from algorithms made easy yt channel
 class Solution {
     public void nextPermutation(int[] nums) {
         int i=nums.length-2;
