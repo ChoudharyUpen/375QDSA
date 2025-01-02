@@ -2,18 +2,21 @@
 //this question is done from algorithms made easy yt channel
 class Solution {
     public void nextPermutation(int[] nums) {
+        //step1
         int i=nums.length-2;
         while(i>=0 && nums[i]>=nums[i+1]){
             i--;
         }
         //i agar agla element sa chota ho gya toh huma wo element mil gya jisko swap karna hai 
         //we have find first decreasing sequence as i
+        //step2
         if(i>=0){
             int j=nums.length-1;
             while(j>=0 && nums[j]<=nums[i])j--;
             swap(nums,i,j);
         }
         //ab baki ka array ko reverse kar k sab sa chota bana hai 
+        //step3
         reverse(nums,i+1);
     }
     //ab huma i sa bada elemnt mil gya ab dono ko swap kar do 
