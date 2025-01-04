@@ -1,3 +1,5 @@
+// HashSet: Duplicates ko avoid karne ke liye.
+// ArrayList: Final result ko ordered list format me dene ke liye.
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         Set<List<Integer>> res = new HashSet<>();
