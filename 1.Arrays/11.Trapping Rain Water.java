@@ -1,4 +1,5 @@
 //done from anuj bhaiya video
+//solution other than this is below of it 
 
 class Solution {
     public int trap(int[] height) {
@@ -25,5 +26,32 @@ class Solution {
             ans+=(Math.min(left[i],right[i])-height[i]);
         }
         return ans;
+    }
+}
+
+//another solution
+// Time complexity: O(n)
+// Space complexity: O(1)
+class Solution {
+    public int trap(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int leftMax = height[left];
+        int rightMax = height[right];
+        int water = 0;
+
+        while (left < right) {
+            if (leftMax < rightMax) {
+                left++;
+                leftMax = Math.max(leftMax, height[left]);
+                water += leftMax - height[left];
+            } else {
+                right--;
+                rightMax = Math.max(rightMax, height[right]);
+                water += rightMax - height[right];
+            }
+        }
+
+        return water;        
     }
 }
