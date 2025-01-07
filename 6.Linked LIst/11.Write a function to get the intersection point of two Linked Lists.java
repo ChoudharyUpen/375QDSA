@@ -1,3 +1,43 @@
+this is more better code then the code below it 
+class Intersect {
+    // Function to find intersection point in Y shaped Linked Lists.
+    static Node intersectPoint(Node head1, Node head2) {
+        // code here
+        Node temp1 = head1;
+        Node temp2 = head2;
+        if(head1==null || head2==null)  return null;
+
+        while(temp1!=temp2)
+        {
+            if(temp1==null)
+            {
+                temp1 = head2;
+            }
+            else{
+                temp1 = temp1.next;
+            }
+
+            
+           if(temp2==null)   
+           { 
+            temp2 = head1;
+           }
+           else{
+            temp2 = temp2.next;
+           }
+        }
+        
+        return temp1;
+    }
+}
+
+
+
+
+
+
+
+
 this code is more  easy to understable than the code given below 
 	this file was updated on 2 july 2024 9:24pm this code is totaly written by myself when praticing coding by self tak -tak -tak
 class Intersect{
