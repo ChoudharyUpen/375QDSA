@@ -1,3 +1,6 @@
+//   Arrays.sort(a); isma array.sort use nahi karna warna hasmap ka koi kaam nahi rahega 
+
+
 class Solution {
     int longSubarrWthSumDivByK(int[] a, int k) {
         int sum = 0, maxLen = 0;
