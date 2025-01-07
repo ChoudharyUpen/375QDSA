@@ -61,3 +61,23 @@ class Solution {
         
     }
 }
+
+Aapka Doubt:
+"Dummy nodes ka kaam already khatam ho gaya tha, toh unhe null karne ki zarurat kyu?"
+
+Answer:
+Haan, technically humne dummy nodes (-1) ka kaam already finish kar diya tha jab humne:
+
+
+zeroTail.next = oneHead.next;
+oneTail.next = twoHead.next;
+lekin safe programming ke liye hum dummy nodes ko poora disconnect karte hain.
+oneHead.next=null;
+twoHead.next=null;
+Node t1=zeroHead;
+zeroHead=zeroHead.next;
+t1.next=null;
+Iska reason hai:
+
+Agar kisi aur part of code mein accidentally dummy nodes ka access ho jaaye, toh wo galat result na de.
+Memory management ke liye bhi zaroori hai, kyunki ab dummy nodes ki zarurat nahi hai.
