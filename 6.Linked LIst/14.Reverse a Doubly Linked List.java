@@ -1,3 +1,24 @@
+//this code is better than code below it 
+class Solution {
+    public DLLNode reverseDLL(DLLNode head) {
+        DLLNode node = head;
+        DLLNode temp = null,ans=null;
+        
+        while(node!=null) {
+            temp = node.next;
+            node.next = node.prev;
+            node.prev = temp;
+            
+            if(temp != null) ans = temp.prev;
+            node = temp;
+        }
+        return ans!=null?ans.prev:head; 
+    }
+}
+
+
+
+
 class Solution {
     public DLLNode reverseDLL(DLLNode head) {
         if(head == null || head.next == null){
