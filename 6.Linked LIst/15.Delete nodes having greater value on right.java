@@ -1,3 +1,4 @@
+//recursion is used in this code
 class Solution {
     Node compute(Node head) {
        if(head.next==null) return head;
