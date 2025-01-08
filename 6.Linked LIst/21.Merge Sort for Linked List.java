@@ -1,18 +1,4 @@
-/*
-The structure of linked list is the following
-
-class Node
-{
-int data;
-Node next;
-    Node(int key)
-    {
-        data = key;
-        next = null;
-    }
-}
-*/
-
+//Recursion is ued in it 
 class Solution {
 
     static Node merge(Node t1, Node t2) {
