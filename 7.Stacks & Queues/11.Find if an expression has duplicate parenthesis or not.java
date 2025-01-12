@@ -1,6 +1,7 @@
 public class GFG {
     static boolean findDuplicateparenthesis(String s) {
         Stack<Character> Stack = new Stack<>();
+        // Convert String to Array: str = ['(', '(', 'a', '+', 'b', ')', ')']
         char[] str = s.toCharArray();
         for (char ch : str) {
             if (ch == ')') {
