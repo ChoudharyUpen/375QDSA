@@ -1,3 +1,31 @@
+//this is the more better solution than down 2 codes
+
+class Solution{
+public DLLNode reverseDLL(DLLNode head) {
+    DLLNode node = head;
+    DLLNode temp = null, ans = null;
+
+    while (node != null) {
+        temp = node.next; // Save the next node
+        node.next = node.prev; // Reverse the next pointer
+        node.prev = temp; // Reverse the prev pointer
+
+        ans = node; // Update the new head to the current node
+        node = temp; // Move to the next node
+    }
+
+    return ans; // Return the new head of the reversed DLL
+}}
+
+
+
+
+
+
+
+
+
+
 //this code is better than code below it 
 class Solution {
     public DLLNode reverseDLL(DLLNode head) {
