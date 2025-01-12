@@ -1,4 +1,14 @@
 //this is the more better solution than down 2 codes
+Input DLL: 1 <-> 2 <-> 3
+
+Step-by-Step Execution:
+Iteration	Node (node)	Temp (temp)	Ans (ans)	Reversed DLL
+1st	            1	          2	          1	     1 (prev set to null)
+2nd	            2	          3	          2	     2 <-> 1
+3rd	            3	          null	      3	     3 <-> 2 <-> 1
+    
+Return Value: ans = 3
+
 
 class Solution{
 public DLLNode reverseDLL(DLLNode head) {
@@ -10,13 +20,15 @@ public DLLNode reverseDLL(DLLNode head) {
         node.next = node.prev; // Reverse the next pointer
         node.prev = temp; // Reverse the prev pointer
 
+        //it is going to store node value which is going to be 
+        //normal traversal --- 1,2,3 at last it will contains 3
         ans = node; // Update the new head to the current node
+        //temp store next pointer ---- for 1,2,3 it will contains 2,3 
         node = temp; // Move to the next node
     }
 
     return ans; // Return the new head of the reversed DLL
 }}
-
 
 
 
