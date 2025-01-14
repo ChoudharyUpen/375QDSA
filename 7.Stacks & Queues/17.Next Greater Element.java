@@ -1,7 +1,7 @@
 //this code is the updated code of the following question because they have changed return value 
 class Solution {
     public ArrayList<Integer> nextLargerElement(int[] arr) {
-        int n = arr.length; /
+        int n = arr.length; 
         Stack<Integer> ss = new Stack<>(); 
         int[] nums = new int[n]; 
         Arrays.fill(nums, -1); 
