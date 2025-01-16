@@ -1,19 +1,20 @@
-class Solution{ 
-    int celebrity(int M[][], int n){
-        //Step1 Find Potential Celebrity which is not 1
-        int candidate = 0;
-        for (int i = 1; i < n; i++) {
-            if (M[candidate][i] == 1)
-                candidate = i;
+class Solution {
+    public int celebrity(int mat[][]) { 
+       int n = mat.length;
+
+        //step 1 find potentaial celebrity
+        int candidate=0;
+        for(int i=1;i<n;i++){
+            if(mat[ candidate][i]==1){
+                candidate=i;            
+            }
         }
-        //Step 2 Verify the Potential Celebrity
-        for (int i = 0; i < n; i++) {
-            //i != candidate  kud ka saath compare nahi kar rahe
-            //check if the candiate know person i ---  candiate kisi ko janata hai 
-            //check if the person i doesnot know the candiate ---- ya koi candiate ko nahi janta 
-            if (i != candidate && (M[candidate][i] == 1 || M[i][candidate] == 0))
-                return -1; 
-        }
-        return candidate; 
+        //now verify potential celbrity
+         for(int i=0;i<n;i++){
+             while(i!=candidate && (mat[candidate][i]==1 || mat[i][candidate]==0)){
+                 return -1;
+             }
+         }
+return candidate;
     }
 }
