@@ -15,10 +15,14 @@ static int countNumber(int n) {
 					if (x <= n) { 
 						s.push(x); 
 						result++; 
-					} } } } 
+					}
+				} 
+			}
+		} 
 		return result; 
 	} 
 	public static void main(String[] args) { 
 		int n = 15; 
 		System.out.println(countNumber(n)); 
-	} } 
+	}
+} 
