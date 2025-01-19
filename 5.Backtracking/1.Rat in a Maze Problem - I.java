@@ -1,3 +1,43 @@
+class Solution {
+    static ArrayList<String> finalAns = new ArrayList<>();
+    public ArrayList<String> findPath(int[][] a) {
+        finalAns = new ArrayList<String>();
+        boolean[][] visited = new boolean[a.length][a[0].length];
+        helper(a, 0, 0, "", visited);
+        return finalAns;
+    }
+    public static void helper(int[][] a, int row, int col, String ans, boolean[][] visited) {
+        if(row < 0 || col < 0 || row > a.length-1 || col > a[0].length-1 || a[row][col] == 0 || visited[row][col] == true) {
+            return ;
+        }
+        if(row == a.length-1 && col == a[0].length-1) {
+            finalAns.add(ans);
+            return;
+        }
+        visited[row][col] = true;
+        helper(a, row-1, col, ans + "U", visited);
+        helper(a, row, col-1, ans + "L", visited);
+        helper(a, row+1, col, ans + "D", visited);
+        helper(a, row, col+1, ans + "R", visited);
+        visited[row][col] = false;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //gfg
 //gfg solutions
 class Solution {
