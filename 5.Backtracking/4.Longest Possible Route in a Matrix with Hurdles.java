@@ -1,3 +1,48 @@
+class Solution {
+    static class PathLength {
+        int max = -1;
+    }
+
+    public static int longestPath(int[][] mat, int n, int m, int xs, int ys, int xd, int yd) {
+        if (mat[xs][ys] == 0 || mat[xd][yd] == 0) {
+            return -1;
+        }
+        PathLength length = new PathLength();
+        boolean vis[][] = new boolean[n][m];
+        helper(mat, n, m, xs, ys, xd, yd, 0, length, vis);
+        return length.max;
+    }
+
+    public static void helper(int matrix[][], int n, int m, int xs, int ys, int xd, int yd, int temp, PathLength length, boolean vis[][]) {
+        if (xs < 0 || ys < 0 || xs >= n || ys >= m || matrix[xs][ys] == 0 || vis[xs][ys] == true) {
+            return;
+        }
+        if (xs == xd && ys == yd) {
+            length.max = Math.max(temp, length.max);
+            return;
+        }
+        vis[xs][ys] = true;
+        helper(matrix, n, m, xs + 1, ys, xd, yd, temp + 1, length, vis);
+        helper(matrix, n, m, xs - 1, ys, xd, yd, temp + 1, length, vis);
+        helper(matrix, n, m, xs, ys + 1, xd, yd, temp + 1, length, vis);
+        helper(matrix, n, m, xs, ys - 1, xd, yd, temp + 1, length, vis);
+        vis[xs][ys] = false;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //gfg
 //gfg solutions
 
