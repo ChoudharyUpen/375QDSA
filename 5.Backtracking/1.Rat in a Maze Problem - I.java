@@ -1,3 +1,59 @@
+//best code than code below it 
+
+class Solution {
+    void getAns(ArrayList<ArrayList<Integer>> mat,int r,int c,String path,ArrayList<String> al){
+     
+//      Base Case (Invalid Moves)
+     
+//      Agar koi bhi condition true hoti hai, toh wapas return karo:
+// r < 0 || c < 0: Out of bounds (maze ke bahar gaya).
+// r >= n || c >= n: Out of bounds (maze ke bahar gaya).
+// mat.get(r).get(c) == 0: Blocked cell (chal nahi sakte).
+// mat.get(r).get(c) == -1: Already visited cell.
+
+      int n=mat.size();
+        if(r<0 || c<0 || r>=n || c>=n || mat.get(r).get(c)==0 || mat.get(r).get(c)==-1){
+            return;
+        }
+        // Destination Check
+        // Agar destination (n-1, n-1) mil gaya, toh current path ko al me add karo aur return kar do.
+        if(r==n-1 && c==n-1){
+            al.add(path);
+            return;
+        }
+        //Mark Current Cell as Visited
+        mat.get(r).set(c,-1);
+        //Recursive Calls (Explore All Directions)
+        getAns(mat,r-1,c,path+"U",al);
+        getAns(mat,r+1,c,path+"D",al);
+        getAns(mat,r,c+1,path+"R",al);
+        getAns(mat,r,c-1,path+"L",al);
+        //Backtrack
+        mat.get(r).set(c,1);
+    }
+    public ArrayList<String> findPath(ArrayList<ArrayList<Integer>> mat) {
+         ArrayList<String> al=new ArrayList<>();
+         String path="";
+         getAns(mat,0,0,path,al);
+         Collections.sort(al);
+         return al;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Solution {
     static ArrayList<String> finalAns = new ArrayList<>();
     public ArrayList<String> findPath(int[][] a) {
