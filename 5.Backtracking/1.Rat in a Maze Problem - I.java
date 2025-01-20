@@ -1,5 +1,15 @@
 //best code than code below it 
 
+//Steps in getAns method to calculate all possible path 
+// Base Case
+// Destination Check
+// Mark Current Cell As Visited
+// Recursive Calls (Explore All Directions)
+// Backtrack
+
+
+
+
 class Solution {
     void getAns(ArrayList<ArrayList<Integer>> mat,int r,int c,String path,ArrayList<String> al){
      
