@@ -6,11 +6,9 @@ class Solution {
     for(int i=0;i<nums.length;i++)
     {
         sum=sum+nums[i];
-      
         max=Math.max(sum,max);
 
-
-        sum agar -minus mai hai to vo value ko ghata raha hai islye hum sum ko 0 kar denge 
+        //sum agar -minus mai hai to vo value ko ghata raha hai islye hum sum ko 0 kar denge 
         if(sum<0) sum=0;
     }
     return max;
