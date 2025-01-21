@@ -1,17 +1,25 @@
 class Solution {
     static void combination(ArrayList<Integer> nums, int start, int sum, ArrayList<Integer> sub, ArrayList<ArrayList<Integer>> res) {
+        //Base Conditions
         if (sum == 0) {
             res.add(new ArrayList<>(sub));
             return;
         }
         if (sum < 0) return;
+
+        //Start Loop for Recursion
         for (int i = start; i < nums.size(); i++) {
             int val = nums.get(i);
-            if (i > start && val == nums.get(i - 1)) continue;
+            // Skip Duplicates
+            if (i > start && val == nums.get(i - 1)) continue; 
+            //Break if Value is Greater than Sum
             if (val > sum) break;
             if (val <= sum) {
+                //Add Value to Current Combination
                 sub.add(val);
+                //Recursive Call
                 combination(nums, i, sum - val, sub, res);
+                //Backtrack
                 sub.remove(sub.size() - 1);
             }
         }
