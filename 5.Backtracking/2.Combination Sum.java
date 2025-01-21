@@ -34,6 +34,7 @@ class Solution {
     }
     
     static ArrayList<ArrayList<Integer>> combinationSum(ArrayList<Integer> A, int B) {
+        Collections.sort(A);
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
         Collections.sort(A);
         combination(A, 0, B, new ArrayList<>(), res);
