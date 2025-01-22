@@ -14,18 +14,23 @@ class Solution {
     }
 
     public static void helper(int matrix[][], int n, int m, int xs, int ys, int xd, int yd, int temp, PathLength length, boolean vis[][]) {
+        // Base Case for Invalid Conditions
         if (xs < 0 || ys < 0 || xs >= n || ys >= m || matrix[xs][ys] == 0 || vis[xs][ys] == true) {
             return;
         }
+        //Destination Reached
         if (xs == xd && ys == yd) {
             length.max = Math.max(temp, length.max);
             return;
         }
+        //Mark Current Cell as Visited
         vis[xs][ys] = true;
+        //Explore 4 Possible Directions
         helper(matrix, n, m, xs + 1, ys, xd, yd, temp + 1, length, vis);
         helper(matrix, n, m, xs - 1, ys, xd, yd, temp + 1, length, vis);
         helper(matrix, n, m, xs, ys + 1, xd, yd, temp + 1, length, vis);
         helper(matrix, n, m, xs, ys - 1, xd, yd, temp + 1, length, vis);
+        // Backtrack (Unmark the Cell)
         vis[xs][ys] = false;
     }
 }
