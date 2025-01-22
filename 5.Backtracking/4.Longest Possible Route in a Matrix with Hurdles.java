@@ -4,6 +4,7 @@ class Solution {
     }
 
     public static int longestPath(int[][] mat, int n, int m, int xs, int ys, int xd, int yd) {
+        //it ensures that the starting or ending points are valid before starting the process
         if (mat[xs][ys] == 0 || mat[xd][yd] == 0) {
             return -1;
         }
