@@ -2,8 +2,8 @@
 //imporved code keeping in mind time limit /time complexity
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode res = new ListNode(0, head);
-        ListNode dummy = res;
+        ListNode res = new ListNode(0, head);    ||  ye ek human dummy node banyi
+        ListNode dummy = res;                    || ye dummy node ko point kar raha hai
 
         for (int i = 0; i < n; i++) {
             head = head.next;
