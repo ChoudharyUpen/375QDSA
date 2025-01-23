@@ -1,3 +1,6 @@
+//do this question again by seeing all the solutions  because in ending part still there is a confusion 
+
+
 class Solution {
     // Function to sort a linked list of 0s, 1s and 2s.
     static Node segregate(Node head) {
