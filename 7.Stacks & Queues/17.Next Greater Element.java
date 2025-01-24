@@ -12,6 +12,7 @@ class Solution {
             }
             ss.push(i); 
         }
+        //now we have done conversion here 
         ArrayList<Integer> result = new ArrayList<>();
         for (int num : nums) {
             result.add(num);
