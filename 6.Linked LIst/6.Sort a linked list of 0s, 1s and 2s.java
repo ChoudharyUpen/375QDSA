@@ -1,3 +1,52 @@
+//this code is better than code below it learn and modify it according to your self 
+class Solution {
+   
+   
+    static Node segregate(Node head) {
+       Node zeroHead=new Node(0);
+       Node oneHead=new Node(0);
+       Node twoHead=new Node(0);
+       Node zero=zeroHead;
+       Node one=oneHead;
+       Node two=twoHead;
+       Node curr=head;
+       while(curr!=null){
+           if(curr.data==1){
+               one.next=curr;
+               one=one.next;
+           }
+           else if(curr.data==0){
+               zero.next=curr;
+               zero=zero.next;
+           }
+           else{
+               two.next=curr;
+               two=two.next;
+           }
+           curr=curr.next;
+           two.next=null;
+           one.next=twoHead.next;
+           zero.next=oneHead.next;
+       }
+      
+       return zeroHead.next;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //do this question again by seeing all the solutions  because in ending part still there is a confusion 
 
 
