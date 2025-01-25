@@ -1,5 +1,44 @@
 class Solution
 {
+    int leafLevel = 0;
+    boolean check(Node root)
+    {
+       return sameLevelOrNot(root, 0);
+    }
+     boolean sameLevelOrNot(Node root, int level) {
+        if (root == null) {
+            return true;
+        }
+        if (root.left == null && root.right == null) {
+            if (leafLevel == 0) {
+                leafLevel = level;
+                return true;
+            }
+            return level == leafLevel;
+        }
+        return sameLevelOrNot(root.left, level + 1) && sameLevelOrNot(root.right, level + 1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Solution
+{
     // Approach ---- Step1 phela first leafnode check karo uska level store karwo
 // step2 check karo koi or leaf node tau nahi hai agar hai tau check karo kya first leaf node or is leaf node ka level same hai
 //agar level same nahi hai tau return false it means all leaves are not at the same level
