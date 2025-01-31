@@ -23,6 +23,7 @@ class Solution {
         if(root.val != subRoot.val) {
             return false;
         }
+       // dono values agla level pa chali jae is liye helper function call kar diya dono values ko .left .left || .right .right karna k baad
         return helper(root.left, subRoot.left) && helper(root.right, subRoot.right);
     }
 }
