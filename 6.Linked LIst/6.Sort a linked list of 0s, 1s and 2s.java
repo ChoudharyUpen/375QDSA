@@ -1,7 +1,5 @@
 //this code is better than code below it learn and modify it according to your self 
 class Solution {
-   
-   
     static Node segregate(Node head) {
        Node zeroHead=new Node(0);
        Node zero=zeroHead;
@@ -10,7 +8,6 @@ class Solution {
        Node twoHead=new Node(0);  
        Node two=twoHead;
       
-    
        Node curr=head;
        while(curr!=null){
            if(curr.data==1){
@@ -30,7 +27,6 @@ class Solution {
            one.next=twoHead.next;
            zero.next=oneHead.next;
        }
-      
        return zeroHead.next;
     }
 }
