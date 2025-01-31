@@ -1,41 +1,31 @@
 //this code without comment for code with comment there is also 1 code downside
-class twoStacks
-{  
+class twoStacks{  
     int arr[]; int size;
     int t1; int t2;
     
-    twoStacks()
-    {
+    twoStacks(){
         size = 100;
         arr = new int[100];
         t1 = -1; t2 = size;
-    }
-    
-    void push1(int x)
-    {
+    } 
+    void push1(int x){
         if(t2 - t1 > 1){
             arr[++t1] = x;
         }
     }
-    
-    void push2(int x)
-    {
+    void push2(int x){
         if(t2 - t1 > 1){
             arr[--t2] = x;
         }
     }
-    
-    int pop1()
-    {
+    int pop1(){
         if(t1 >= 0){
             int x = arr[t1--];
             return x;
         }
         return -1;
     }
-    
-    int pop2()
-    {
+    int pop2(){
         if(t2 < size){
             int x = arr[t2++];
             return x;
