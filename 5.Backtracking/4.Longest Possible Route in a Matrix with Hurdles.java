@@ -1,4 +1,7 @@
 class Solution {
+//     PathLength class ko alag se likhna isliye faydemand hai kyunki:
+
+// Hum max ko easily track kar sakte hain across all recursive calls without passing it repeatedly.
     static class PathLength {
         int max = -1;
     }
