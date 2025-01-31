@@ -3,6 +3,7 @@
 class Tree{
     public ArrayList<Integer> reverseLevelOrder(Node node) {
     ArrayList<Integer> ans= new ArrayList<>();
+    //Iska matlab hai ki hum Queue bana rahe hain jo LinkedList ke andar store ho rahi hai.
     Queue <Node> q=new LinkedList<>();
     q.add(node);
     while(q.size()!=0){
