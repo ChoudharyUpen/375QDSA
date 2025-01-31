@@ -10,22 +10,24 @@ class Solution {
       
        Node curr=head;
        while(curr!=null){
-           if(curr.data==1){
-               one.next=curr;
-               one=one.next;
-           }
-           else if(curr.data==0){
+                if(curr.data==0){
                zero.next=curr;
                zero=zero.next;
+           }
+           else if(curr.data==1){
+               one.next=curr;
+               one=one.next;
            }
            else{
                two.next=curr;
                two=two.next;
            }
            curr=curr.next;
+           
            two.next=null;
-           one.next=twoHead.next;
+           
            zero.next=oneHead.next;
+           one.next=twoHead.next;
        }
        return zeroHead.next;
     }
