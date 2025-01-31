@@ -4,11 +4,13 @@ class Solution {
    
     static Node segregate(Node head) {
        Node zeroHead=new Node(0);
-       Node oneHead=new Node(0);
-       Node twoHead=new Node(0);
        Node zero=zeroHead;
+       Node oneHead=new Node(0); 
        Node one=oneHead;
+       Node twoHead=new Node(0);  
        Node two=twoHead;
+      
+    
        Node curr=head;
        while(curr!=null){
            if(curr.data==1){
