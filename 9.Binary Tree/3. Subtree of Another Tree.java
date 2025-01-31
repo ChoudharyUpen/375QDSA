@@ -6,6 +6,10 @@ class Solution {
         if(helper(root, subRoot)) {
             return true;
         }
+
+        // 1st Call: isSubtree(root = 3, subRoot = 4)
+        // 3 != 4, to helper(3, 4) false return karega. ❌
+        // Ab left aur right subtree me check hoga:
         return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
     }
 
