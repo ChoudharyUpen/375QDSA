@@ -1,4 +1,5 @@
 //recursion is used in this code
+//take differnt code for this not able to understand this 
 class Solution {
     Node compute(Node head) {
        if(head.next==null) return head;
