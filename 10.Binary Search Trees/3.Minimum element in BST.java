@@ -1,6 +1,44 @@
 class Solution {
     int minValue(Node root) {
              if (root == null) return Integer.MAX_VALUE;
+    return  Minimum(root,root.data);
+    }private int Minimum(Node root,int min)
+    {
+        if(root==null){
+            return min;
+        }
+        if(root.data<min){
+            min =root.data;
+        }
+        int leftMin = Minimum(root.left,min);
+          int rightMin =Minimum(root.right, min);
+         return Math.min(leftMin, rightMin);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Solution {
+    int minValue(Node root) {
+             if (root == null) return Integer.MAX_VALUE;
         //   int min=root.data;
     return  Minimum(root,root.data);
     //  return min;
