@@ -11,7 +11,7 @@ class Solution {
         if (mat[xs][ys] == 0 || mat[xd][yd] == 0) {
             return -1;
         }
-        PathLength length = new PathLength();
+        PathLength length = new PathLength(); ///this is a custom class
         boolean vis[][] = new boolean[n][m];
         helper(mat, n, m, xs, ys, xd, yd, 0, length, vis);
         return length.max;
