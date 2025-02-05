@@ -1,5 +1,12 @@
 //this is the more better code for this question compare to code given below 
 
+// Step-by-Step Explanation
+// Ek ArrayList me saare elements store kar lo.
+// ArrayList ko sort kar lo using Collections.sort().
+// Sorted values wapas Linked List me daal do.
+
+
+
 class Solution {
     // Function to sort the given linked list using Merge Sort.
     static Node mergeSort(Node head) {
