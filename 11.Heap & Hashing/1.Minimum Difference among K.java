@@ -1,68 +1,41 @@
-Input:
-N=7
-K=3
-arr[] = {10, 100, 300, 200, 1000, 20, 30}
-Output:
-20
+class Solution {
+    int minDiff(int[] arr, int k, int m, int th) {
+        Arrays.sort(arr); // Step 1: Sort the array
+        int n = arr.length;
+        int minDiff = Integer.MAX_VALUE;
+        int count = 0; // Track numbers >= th in the window
 
-//this is the updated solution for this question
-//from chatgpt
-//learned when doing coding tak tak
-    
-class Solution{
-    long minDiff(long a[] ,int N,int K){
-     Arrays.sort(a);
-        long minDiff = Long.MAX_VALUE;
-        //only running a loop k times
-        for (int i = 0; i <= N - K; i++) {
-            // Find the difference between the maximum and minimum in the current window of size K
-            long diff = a[i + K - 1] - a[i];
-            minDiff = Math.min(minDiff, diff);
+        // Step 2: Count the initial window (first `k` elements)
+        for (int i = 0; i < k; i++) {
+            if (arr[i] >= th) {
+                count++;
+            }
         }
-        //return the minimum differnce among k
-        return minDiff;
+
+        // Step 3: If the initial window is valid, calculate the min difference
+        if (count >= m) {
+            minDiff = arr[k - 1] - arr[0];
+        }
+
+        // Step 4: Use sliding window to check remaining windows efficiently
+        for (int i = 1; i <= n - k; i++) {
+            // Remove the element going out of the window
+            if (arr[i - 1] >= th) {
+                count--;
+            }
+
+            // Add the new element coming into the window
+            if (arr[i + k - 1] >= th) {
+                count++;
+            }
+
+            // Only update minDiff if the current window is valid
+            if (count >= m) {
+                minDiff = Math.min(minDiff, arr[i + k - 1] - arr[i]);
+            }
+        }
+
+        // Step 5: If no valid selection found, return -1
+        return (minDiff == Integer.MAX_VALUE) ? -1 : minDiff;
     }
 }
-
-
-
-//this was the previous code 
-
-// class Solution{
-//     long minDiff(long a[] ,int N,int K){
-//         //Step1 Array ko sort kar liya
-//         Arrays.sort(a);
-//         //Step2 ek minimum or maximum value le le
-//         long min = Long.MAX_VALUE;
-//         long max = Long.MIN_VALUE;
-        
-//         //Step3 Ab pura Array ko traverse kar k minimum or 
-//         //maxmum value nikal lenge
-//         for(int i = 0;i<K;i++){
-//             min = Math.min(a[i], min);
-//             max = Math.max(a[i], max);
-//         }
-//         //Step4 Dono ka differnce nikal liya
-//         long dif = (max - min);
-        
-//         // window
-//         int start = 1;
-//         int end = K; //for example 1 its 3 
-
-// //3 to last means 7    on first trasversal 3 then 4,5,6,7
-//         while(end < a.length){
-//             //taking maximuma and minimum value
-//             long maximum = a[end];
-//             long minimun = a[start];
-//             //subtracting them and finding some value
-//             long abs = Math.abs(minimun - maximum);
-//             //finding the differnce if its lower replacing it
-//             dif = Math.min(abs, dif);
-
-//             end++;
-//             start++;
-//         }
-//         //finally returning the final answer
-//         return dif;
-//     }
-// }
