@@ -1,3 +1,6 @@
+
+
+//replace this code with another code which more easy to understand
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
         HashMap<Integer, Integer> hm = new HashMap<>();
