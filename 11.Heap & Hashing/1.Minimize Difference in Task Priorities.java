@@ -1,7 +1,7 @@
 class Solution {
     int minDiff(int[] arr, int k, int m, int th) {
-        Arrays.sort(arr); // Step 1: Sort the array
         int n = arr.length;
+        Arrays.sort(arr); // Step 1: Sort the array
         int minDiff = Integer.MAX_VALUE;
         int count = 0; // Track numbers >= th in the window
 
