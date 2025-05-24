@@ -20,7 +20,7 @@
             if(isSafe(board, row, col)) {
                 board[row][col] = 'Q';
                 queen(board, row + 1, list);
-                board[row][col] = '.';
+                board[row][col] = '.';   //backtracking is used here
             }
         }
     }
