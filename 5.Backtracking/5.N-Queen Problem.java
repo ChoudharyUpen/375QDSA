@@ -43,7 +43,7 @@
             }
         }
 
-        //for checking left diagonal
+        //for checking left diagonal  ↖️
 
         int maxLeft = Math.min(row, col);
 
@@ -53,7 +53,7 @@
             }
         }
 
-        //for checking right diagonal
+        //for checking right diagonal ↗️
 
         int maxRight = Math.min(row, board.length - 1 - col);
 
